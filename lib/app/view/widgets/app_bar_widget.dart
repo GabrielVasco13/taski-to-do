@@ -11,6 +11,7 @@ class AppBarWidget extends PreferredSize {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.white,
       leading: Padding(
         padding: const EdgeInsets.only(left: 24.0),
         child: Image.asset('assets/icon.png'),
