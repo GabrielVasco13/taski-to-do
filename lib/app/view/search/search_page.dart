@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:taski_to_do/app/view/widgets/bottom_navigation.dart';
+import 'package:taski_to_do/app/view/widgets/app_bar_widget.dart';
+import 'package:taski_to_do/app/view/widgets/bottom_navigation_widget.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Search'),
-      ),
-      bottomNavigationBar: const BottomNavigation(),
-      body: const Center(
+    return const Scaffold(
+      appBar: AppBarWidget(),
+      bottomNavigationBar: BottomNavigationWidget(),
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

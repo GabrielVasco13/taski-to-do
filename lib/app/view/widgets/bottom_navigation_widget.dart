@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:routefly/routefly.dart';
 import 'package:taski_to_do/app/app_widget.dart';
 
-class BottomNavigation extends StatefulWidget {
-  const BottomNavigation({super.key});
+class BottomNavigationWidget extends StatefulWidget {
+  const BottomNavigationWidget({super.key});
 
   @override
-  State<BottomNavigation> createState() => _BottomNavigationState();
+  State<BottomNavigationWidget> createState() => _BottomNavigationWidgetState();
 }
 
-class _BottomNavigationState extends State<BottomNavigation> {
+class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   int _currentIndex = 0;
 
   final List<String> _routes = [
