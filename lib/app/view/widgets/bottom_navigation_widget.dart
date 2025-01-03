@@ -13,7 +13,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   int _currentIndex = 0;
 
   final List<String> _routes = [
-    routePaths.view.welcome,
+    routePaths.view.toDo,
     routePaths.view.create,
     routePaths.view.search,
     routePaths.view.done,
