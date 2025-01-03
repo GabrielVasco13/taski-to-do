@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:routefly/routefly.dart';
 import 'app_widget.route.dart';
@@ -14,6 +12,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: Routefly.routerConfig(
         routes: routes,
+        initialPath: routePaths.view.welcome,
       ),
     );
   }

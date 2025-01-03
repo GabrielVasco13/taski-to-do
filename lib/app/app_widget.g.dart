@@ -8,6 +8,16 @@ List<RouteEntity> get routes => [
         uri: Uri.parse('/view/welcome'),
         routeBuilder: b0Builder,
       ),
+      RouteEntity(
+        key: '/view/search',
+        uri: Uri.parse('/view/search'),
+        routeBuilder: b1Builder,
+      ),
+      RouteEntity(
+        key: '/view/create',
+        uri: Uri.parse('/view/create'),
+        routeBuilder: b2Builder,
+      ),
     ];
 
 const routePaths = (
@@ -15,5 +25,7 @@ const routePaths = (
   view: (
     path: '/view',
     welcome: '/view/welcome',
+    search: '/view/search',
+    create: '/view/create',
   ),
 );
