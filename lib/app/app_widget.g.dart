@@ -18,6 +18,11 @@ List<RouteEntity> get routes => [
         uri: Uri.parse('/view/create'),
         routeBuilder: b2Builder,
       ),
+      RouteEntity(
+        key: '/view/done',
+        uri: Uri.parse('/view/done'),
+        routeBuilder: b3Builder,
+      ),
     ];
 
 const routePaths = (
@@ -27,5 +32,6 @@ const routePaths = (
     welcome: '/view/welcome',
     search: '/view/search',
     create: '/view/create',
+    done: '/view/done',
   ),
 );

@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:routefly/routefly.dart';
 
 import 'view/create/create_page.dart' as a2;
+import 'view/done/done_page.dart' as a3;
 import 'view/search/search_page.dart' as a1;
 import 'view/welcome/welcome_page.dart' as a0;
 
@@ -24,4 +25,10 @@ Route b2Builder(BuildContext ctx, RouteSettings settings) =>
       ctx,
       settings,
       const a2.CreatePage(),
+    );
+Route b3Builder(BuildContext ctx, RouteSettings settings) =>
+    Routefly.defaultRouteBuilder(
+      ctx,
+      settings,
+      const a3.DonePage(),
     );

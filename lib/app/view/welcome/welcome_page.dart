@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taski_to_do/app/view/widgets/bottom_navigation.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -9,23 +10,7 @@ class WelcomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Welcome to Taski'),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Minha conta",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_basket),
-            label: "Meus pedidos",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: "Favoritos",
-          ),
-        ],
-      ),
+      bottomNavigationBar: const BottomNavigation(),
       body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:taski_to_do/app/view/widgets/bottom_navigation.dart';
 
-class CreatePage extends StatelessWidget {
-  const CreatePage({super.key});
+class DonePage extends StatelessWidget {
+  const DonePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Create'),
+        title: const Text('Done'),
       ),
       bottomNavigationBar: const BottomNavigation(),
       body: const Center(
