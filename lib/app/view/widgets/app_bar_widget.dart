@@ -19,11 +19,20 @@ class AppBarWidget extends PreferredSize {
       titleSpacing: 6,
       title: const Text('Taski'),
       actions: [
-        const Text('John'),
+        const Text(
+          'John',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         const SizedBox(width: 16),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(24),
-          child: Image.asset('assets/images/picture.png'),
+        const CircleAvatar(
+          radius: 24,
+          backgroundImage: AssetImage(
+            'assets/images/picture.png',
+          ),
         ),
         const SizedBox(width: 16),
       ],

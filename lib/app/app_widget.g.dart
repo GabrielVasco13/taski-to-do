@@ -4,23 +4,23 @@ part of 'app_widget.dart';
 
 List<RouteEntity> get routes => [
       RouteEntity(
-        key: '/view/welcome',
-        uri: Uri.parse('/view/welcome'),
-        routeBuilder: b0Builder,
-      ),
-      RouteEntity(
         key: '/view/search',
         uri: Uri.parse('/view/search'),
-        routeBuilder: b1Builder,
+        routeBuilder: b0Builder,
       ),
       RouteEntity(
         key: '/view/create',
         uri: Uri.parse('/view/create'),
-        routeBuilder: b2Builder,
+        routeBuilder: b1Builder,
       ),
       RouteEntity(
         key: '/view/done',
         uri: Uri.parse('/view/done'),
+        routeBuilder: b2Builder,
+      ),
+      RouteEntity(
+        key: '/view/to_do',
+        uri: Uri.parse('/view/to_do'),
         routeBuilder: b3Builder,
       ),
     ];
@@ -29,9 +29,9 @@ const routePaths = (
   path: '/',
   view: (
     path: '/view',
-    welcome: '/view/welcome',
     search: '/view/search',
     create: '/view/create',
     done: '/view/done',
+    toDo: '/view/to_do',
   ),
 );

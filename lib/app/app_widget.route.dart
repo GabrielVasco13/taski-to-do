@@ -3,32 +3,32 @@
 import 'package:flutter/widgets.dart';
 import 'package:routefly/routefly.dart';
 
-import 'view/create/create_page.dart' as a2;
-import 'view/done/done_page.dart' as a3;
-import 'view/search/search_page.dart' as a1;
-import 'view/welcome/welcome_page.dart' as a0;
+import 'view/create/create_page.dart' as a1;
+import 'view/done/done_page.dart' as a2;
+import 'view/search/search_page.dart' as a0;
+import 'view/to_do/to_do_page.dart' as a3;
 
 Route b0Builder(BuildContext ctx, RouteSettings settings) =>
     Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a0.WelcomePage(),
+      const a0.SearchPage(),
     );
 Route b1Builder(BuildContext ctx, RouteSettings settings) =>
     Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a1.SearchPage(),
+      const a1.CreatePage(),
     );
 Route b2Builder(BuildContext ctx, RouteSettings settings) =>
     Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a2.CreatePage(),
+      const a2.DonePage(),
     );
 Route b3Builder(BuildContext ctx, RouteSettings settings) =>
     Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a3.DonePage(),
+      const a3.ToDoPage(),
     );
