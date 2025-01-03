@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:taski_to_do/app/models/task_model.dart';
 import 'package:taski_to_do/app/repository/task_repository.dart';
 
-class WelcomeViewModel extends ChangeNotifier {
-  WelcomeViewModel(this._taskRepository);
+class ToDoViewModel extends ChangeNotifier {
+  ToDoViewModel(this._taskRepository);
 
   final TaskRepository _taskRepository;
 
