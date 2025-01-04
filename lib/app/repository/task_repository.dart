@@ -2,6 +2,10 @@ import 'package:taski_to_do/app/interface/task_interface.dart';
 import 'package:taski_to_do/app/models/task_model.dart';
 
 class TaskRepository implements ITaskRepository {
+  static final TaskRepository _instance = TaskRepository._internal();
+  factory TaskRepository() => _instance;
+  TaskRepository._internal();
+
   final List<TaskModel> _tasks = [];
 
   @override
