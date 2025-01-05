@@ -54,4 +54,9 @@ class TaskRepository implements ITaskRepository {
       _tasks.add(task);
     }
   }
+
+  @override
+  List<TaskModel> getTasks() {
+    return _tasks;
+  }
 }

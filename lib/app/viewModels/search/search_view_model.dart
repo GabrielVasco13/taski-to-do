@@ -1,34 +1,30 @@
 import 'package:flutter/widgets.dart';
+import 'package:taski_to_do/app/interface/task_interface.dart';
 import 'package:taski_to_do/app/models/task_model.dart';
-import 'package:taski_to_do/app/repository/task_repository.dart';
 
 class SearchViewModel extends ChangeNotifier {
-  SearchViewModel(this._taskRepository);
+  SearchViewModel(this._repository);
 
-  final TaskRepository _taskRepository;
-  String _search = '';
-  List<TaskModel> _searchResults = [];
+  final ITaskRepository _repository;
+  List<TaskModel> _filteredTasks = [];
+  List<TaskModel> get filteredTasks => _filteredTasks;
 
-  String get searchQuery => _search;
-  List<TaskModel> get searchResults => _searchResults;
-
-  void search(String result) {
-    _search = result;
-    if (result.isEmpty) {
-      _searchResults = [];
+  void searchTasks(String query) {
+    if (query.isEmpty) {
+      _filteredTasks = [];
     } else {
-      _searchResults = _taskRepository.tasks
+      final tasks = _repository.getTasks();
+      _filteredTasks = tasks
           .where((task) =>
-              task.title.toLowerCase().contains(result.toLowerCase()) ||
-              task.description.toLowerCase().contains(result.toLowerCase()))
+              task.title.toLowerCase().contains(query.toLowerCase()) ||
+              task.description.toLowerCase().contains(query.toLowerCase()))
           .toList();
     }
     notifyListeners();
   }
 
   void clearSearch() {
-    _search = '';
-    _searchResults = [];
+    _filteredTasks = [];
     notifyListeners();
   }
 }
