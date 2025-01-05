@@ -40,12 +40,12 @@ class _ToDoPageState extends State<ToDoPage> {
                         Image.asset('assets/no-result.png'),
                         const SizedBox(height: 16),
                         const Text(
-                          'No tasks yet',
+                          'You have no task listed.',
                           style: TextStyle(
                             fontSize: 18,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w300,
                           ),
-                        )
+                        ),
                       ],
                     ),
                   )
