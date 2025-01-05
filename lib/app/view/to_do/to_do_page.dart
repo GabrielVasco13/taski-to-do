@@ -30,29 +30,44 @@ class _ToDoPageState extends State<ToDoPage> {
           backgroundColor: Colors.white,
           appBar: const AppBarWidget(),
           bottomNavigationBar: const BottomNavigationWidget(),
-          body: Column(
-            children: [
-              TitleMessageWidget(
-                text: "You've got ${_viewModel.pendingTasks.length} tasks",
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: _viewModel.pendingTasks.length,
-                  itemBuilder: (context, index) {
-                    final task = _viewModel.pendingTasks[index];
-                    return ListTile(
-                      title: Text(task.title),
-                      subtitle: Text(task.description),
-                      trailing: Checkbox(
-                        value: task.isCompleted,
-                        onChanged: (_) =>
-                            _viewModel.toggleTaskCompletion(index),
-                      ),
-                    );
-                  },
-                ),
-              ),
-            ],
+          body: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: _viewModel.pendingTasks.isEmpty
+                ? Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('assets/no-result.png'),
+                        const SizedBox(height: 16),
+                        const Text(
+                          'No tasks yet',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                : ListView.separated(
+                    itemCount: _viewModel.pendingTasks.length,
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 8),
+                    itemBuilder: (context, index) {
+                      final task = _viewModel.pendingTasks[index];
+                      return Card(
+                        child: ListTile(
+                          title: Text(task.title),
+                          subtitle: Text(task.description),
+                          trailing: Checkbox(
+                            value: task.isCompleted,
+                            onChanged: (_) =>
+                                _viewModel.toggleTaskCompletion(index),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
           ),
         );
       },
