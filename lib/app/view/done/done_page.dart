@@ -64,7 +64,12 @@ class _DonePageState extends State<DonePage> {
                     children: [
                       Image.asset('assets/no-result.png'),
                       const SizedBox(height: 8),
-                      const Text('No completed tasks yet')
+                      const Text(
+                        'No completed tasks yet',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w300,
+                        ),
+                      )
                     ],
                   )
                 : ListView.builder(

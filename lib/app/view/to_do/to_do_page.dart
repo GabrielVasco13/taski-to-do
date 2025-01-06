@@ -42,7 +42,6 @@ class _ToDoPageState extends State<ToDoPage> {
                         const Text(
                           'You have no task listed.',
                           style: TextStyle(
-                            fontSize: 18,
                             fontWeight: FontWeight.w300,
                           ),
                         ),

@@ -74,7 +74,12 @@ class _SearchPageState extends State<SearchPage> {
                     children: [
                       Image.asset('assets/no-result.png'),
                       const SizedBox(height: 8),
-                      const Text('No tasks found')
+                      const Text(
+                        'No result found',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w300,
+                        ),
+                      )
                     ],
                   )
                 : ListView.builder(
